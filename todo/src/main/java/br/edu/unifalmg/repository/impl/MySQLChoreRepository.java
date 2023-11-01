@@ -60,7 +60,7 @@ public class MySQLChoreRepository implements ChoreRepository {
         try {
             connection.close();
             statement.close();
-            //preparedStatement.close();
+            preparedStatement.close();
             resultSet.close();
         }catch(SQLException exception){
             System.out.println("Error when closing database connections.");
