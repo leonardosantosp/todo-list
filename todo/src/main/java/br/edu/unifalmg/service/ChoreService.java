@@ -22,6 +22,30 @@ public class ChoreService {
 
     private ChoreRepository repository;
 
+    public void setChores(List<Chore> chores) {
+        this.chores = chores;
+    }
+
+    public ObjectMapper getMapper() {
+        return mapper;
+    }
+
+    public void setMapper(ObjectMapper mapper) {
+        this.mapper = mapper;
+    }
+
+    public ChoreRepository getRepository() {
+        return repository;
+    }
+
+    public void setRepository(ChoreRepository repository) {
+        this.repository = repository;
+    }
+
+    public Predicate<List<Chore>> getIsChoreListEmpty() {
+        return isChoreListEmpty;
+    }
+
     public ChoreService(ChoreRepository repository) {
         chores = new ArrayList<>();
         mapper = new ObjectMapper().findAndRegisterModules();
